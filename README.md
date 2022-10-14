@@ -1,6 +1,7 @@
 # sma_backtest
 
 --- Video ---
+-------------
 
 Link XXX
 
@@ -10,5 +11,6 @@ Today we show you how to do a simple trading strategy backtest in Python. The st
 
 
 --- Files ---
+-------------
 
   * backtest_2sma.ipynb: the backtest code (python notebook)
