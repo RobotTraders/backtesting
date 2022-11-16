@@ -1,4 +1,4 @@
-# sma_backtest
+# ma_backtest
 
 --- Video ---
 -------------
