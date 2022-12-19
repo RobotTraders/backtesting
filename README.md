@@ -1,9 +1,8 @@
 # ma_backtest
 
-backtest_2sma_btc.ipynb
--------------
-
 Backtest your OWN TRADING BOT in Python | Tutorial
+-------------
+Code: backtest_2sma_btc.ipynb
 
 https://youtu.be/DAFQ0HHo8iY
 
