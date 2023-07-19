@@ -1,7 +1,7 @@
 # backtesting
 
 
-Optimise your trading strategies for SAFER and more PROFITABLE results with the RSI | Tutorial
+Optimise your trading strategies for SAFER and more PROFITABLE results with the RSI
 -------------
 Code: optimisation_with_rsi.ipynb
 
@@ -10,7 +10,7 @@ https://youtu.be/PljviyzhdhU
 Using the relative strength index indicator, we show you how to optimise a simple trading strategy in Python. This pedagogical tutorial emphasizes caveats when it comes to finding "best" parameters for a strategy, as well as some important metrics to evaluate the quality of the overall strategy. 
 
 
-Backtest your OWN TRADING BOT in Python | Tutorial
+Backtest your OWN TRADING BOT in Python
 -------------
 Code: backtest_2sma_btc.ipynb
 
