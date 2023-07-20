@@ -25,7 +25,7 @@ ending_date_dl = "01 january 2022"
 
 ## portfolio
 initial_capital = 1000     # in quote
-exposure = 2     # in percent
+exposure = 2     # position size in percent
 # exposure = 'all'      # use this instead if you want 100% of your portfolio to be used for each trade
 trade_fees = 0.1     # in percent
 leverage = 5
