@@ -193,17 +193,17 @@ def run_backtest(data):
                 sys.exit()
 
             elif not ignore_sl and row['low'] <= sl_price:
-                pnl = calculate_pnl(entry_price, price, quantity, order_in_progress)
-                fee_exit = quantity * price * trade_fees / 100
+                pnl = calculate_pnl(entry_price, sl_price, quantity, order_in_progress)
+                fee_exit = quantity * sl_price * trade_fees / 100
                 wallet += position - fee_entry + pnl - fee_exit
-                record_order(row['timestamp'], 'long sl', price, 0, pnl - fee_exit - fee_entry, wallet, fee_exit, orders)
+                record_order(row['timestamp'], 'long sl', sl_price, 0, pnl - fee_exit - fee_entry, wallet, fee_exit, orders)
                 order_in_progress = None
 
             elif not ignore_tp and row['high'] >= tp_price:
-                pnl = calculate_pnl(entry_price, price, quantity, order_in_progress)
-                fee_exit = quantity * price * trade_fees / 100
+                pnl = calculate_pnl(entry_price, tp_price, quantity, order_in_progress)
+                fee_exit = quantity * tp_price * trade_fees / 100
                 wallet += position - fee_entry + pnl - fee_exit
-                record_order(row['timestamp'], 'long tp', price, 0, pnl - fee_exit - fee_entry, wallet, fee_exit, orders)
+                record_order(row['timestamp'], 'long tp', tp_price, 0, pnl - fee_exit - fee_entry, wallet, fee_exit, orders)
                 order_in_progress = None
 
             elif not ignore_exit and check_long_exit_condition(row, previous_row):
@@ -224,17 +224,17 @@ def run_backtest(data):
                 sys.exit()
 
             elif not ignore_sl and row['high'] >= sl_price:
-                pnl = calculate_pnl(entry_price, price, quantity, order_in_progress)
-                fee_exit = quantity * price * trade_fees / 100
+                pnl = calculate_pnl(entry_price, sl_price, quantity, order_in_progress)
+                fee_exit = quantity * sl_price * trade_fees / 100
                 wallet += position - fee_entry + pnl - fee_exit
-                record_order(row['timestamp'], 'short sl', price, 0, pnl - fee_exit - fee_entry, wallet, fee_exit, orders)
+                record_order(row['timestamp'], 'short sl', sl_price, 0, pnl - fee_exit - fee_entry, wallet, fee_exit, orders)
                 order_in_progress = None
 
             elif not ignore_tp and row['low'] <= tp_price:
-                pnl = calculate_pnl(entry_price, price, quantity, order_in_progress)
-                fee_exit = quantity * price * trade_fees / 100
+                pnl = calculate_pnl(entry_price, tp_price, quantity, order_in_progress)
+                fee_exit = quantity * tp_price * trade_fees / 100
                 wallet += position - fee_entry + pnl - fee_exit
-                record_order(row['timestamp'], 'short tp', price, 0, pnl - fee_exit - fee_entry, wallet, fee_exit, orders)
+                record_order(row['timestamp'], 'short tp', tp_price, 0, pnl - fee_exit - fee_entry, wallet, fee_exit, orders)
                 order_in_progress = None
 
             elif not ignore_exit and check_short_exit_condition(row, previous_row):
